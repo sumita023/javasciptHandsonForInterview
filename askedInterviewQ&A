@@ -1,1 +1,23 @@
+1.call,apply &bind
+let commonFun=function(location, city){
+    console.log(this.firstName+" "+this.lastName+" "+location+" "+city);
+}
+//call, apply,bind
+let name1={
+    firstName:"sumita",
+    lastName:"bhowmick"
+}
+let name2={
+    firstName:"Divya",
+    lastName:"singh"
+}
+let name3={
+    firstName:"Rahul",
+    lastName:"Datir"
+}
 
+commonFun.call(name1, "Kolkata", "sodepur");
+commonFun.apply(name2, ["MP","Bhopal"]);
+
+let bindFun=commonFun.bind(name3,"Mumbai", "kalyan");
+bindFun();
